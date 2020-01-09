@@ -1,0 +1,191 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  @media @tablet-down {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .site-logo {
+    img {
+      width: 100px;
+    }
+  }
+  .site-nav {
+    margin-left: 50px;
+    padding: 20px 0;
+    .nav-linklist {
+      display: flex;
+      justify-content: space-between;
+
+      .cta a {
+        background: #da8e62;
+        border-radius: 4px;
+      }
+      .nav-item a {
+        font-weight: bold;
+        padding: 10px 20px;
+        margin: 5px 15px;
+        color: #ffffff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.hero-banner {
+  height: 75vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.hero-banner::after {
+  content: "";
+  background-image: url(../img/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 75vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+}
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media @tablet-down {
+    padding: 0 20px;
+  }
+}
+.search {
+  display: inline-block;
+  position: relative;
+  height: 35px;
+  width: 35px;
+  box-sizing: border-box;
+  margin: 0px 8px 7px 0px;
+  padding: 7px 9px 0px 9px;
+  border: 3px solid white;
+  border-radius: 50px;
+  transition: all 200ms ease;
+  cursor: text;
+
+  &:after {
+    content: "";
+    position: absolute;
+    width: 3px;
+    height: 20px;
+    right: -5px;
+    top: 21px;
+    background: white;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    transition: all 200ms ease;
+  }
+
+  &.active,
+  &:hover {
+    width: 500px;
+    margin-right: 0px;
+    &:after {
+      height: 0px;
+    }
+  }
+
+  input {
+    width: 100%;
+    border: none;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    font-size: 15px;
+    color: inherit;
+    background: transparent;
+    outline-width: 0px;
+  }
+}
+.hero-text {
+  text-align: center;
+  padding: 20px 0;
+}
+.true-foodie {
+  margin-top: -2%;
+  width: 100%;
+  position: relative;
+  min-height: 50vh;
+  padding: 150px 0px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    opacity: 0.5;
+    background-image: url(../img/food-bg.jpg);
+    background-color: #f8f6ee;
+    background-blend-mode: multiply;
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center;
+    clip-path: polygon(0 3%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+.inner-wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.one-column {
+  text-align: center;
+  padding: 0 50px;
+}
+
+.two-columns {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 100px;
+  width: 100%;
+  padding: 0 50px;
+  align-items: center;
+  @media @tablet-down {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .food-truck {
+    width: 70%;
+    @media @tablet-down {
+      margin: 0 auto;
+    }
+  }
+}
+
+.img {
+  width: 100%;
+}
+@media @tablet-down {
+  .text-content {
+    h3 {
+      text-align: center;
+    }
+  }
+}

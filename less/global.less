@@ -1,0 +1,48 @@
+/* Global
+ * ========================================================================== */
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-size: calc(16px + 0.3vw);
+  line-height: 1.75;
+}
+/* Typography
+ * ========================================================================== */
+
+span,
+p,
+a,
+td,
+th {
+  font-size: 0.8em;
+  .baseFont();
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+h1 {
+  font-size: 3em;
+  .headerFontHeavy();
+}
+
+h2 {
+  font-size: 2.2em;
+  .headerFontHeavy();
+}
+h3 {
+  font-size: 1.7em;
+  .headerFontBold();
+}
+h4 {
+  font-size: 1.3em;
+  .headerFontBold();
+}
